@@ -1,5 +1,7 @@
-var Scan_Id = Buffer.from(CREDS).toString('base64')
-const {makeid} = require('./id');
+if (fs.existsSync('./auth_info_baileys')) {
+    fs.emptyDirSync(__dirname + '/auth_info_baileys');
+  };
+  
 const express = require('express');
 const fs = require('fs');
 let router = express.Router()
