@@ -1,5 +1,5 @@
-const PastebinAPI = require('pastebin-js'),
-pastebin = new PastebinAPI('EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL')
+let CREDS = fs.readFileSync(__dirname + '/auth_info_baileys/creds.json')
+var Scan_Id = Buffer.from(CREDS).toString('base64')
 const {makeid} = require('./id');
 const express = require('express');
 const fs = require('fs');
