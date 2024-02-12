@@ -1,7 +1,5 @@
-if (fs.existsSync('./auth_info_baileys')) {
-    fs.emptyDirSync(__dirname + '/auth_info_baileys');
-  };
-  
+const PastebinAPI = require('pastebin-js'),
+pastebin = new PastebinAPI('EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL')
 const express = require('express');
 const fs = require('fs');
 let router = express.Router()
